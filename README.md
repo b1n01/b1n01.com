@@ -14,7 +14,21 @@ Start the dev server:
 npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000)
+and visit [http://localhost:3000](http://localhost:3000).
+
+Build the static site:
+
+```
+npm run publish
+```
+
+To try the static site locally, run:
+
+```
+npx http-server out
+```
+
+and visit [http://localhost:8080](http://localhost:8080).
 
 ## Using docker
 
