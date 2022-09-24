@@ -30,6 +30,14 @@ npx http-server out
 
 and visit [http://localhost:8080](http://localhost:8080).
 
+## Create a new post
+
+Use the create-post utility to generate a file for a new post:
+
+```
+npm run create-post "New Blog Post"
+```
+
 ## Using docker
 
 You can use the utility `node.sh` to run command from a nodejs container:

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "publish": "next build && next export"
+    "publish": "next build && next export",
+	"create-post": "node ./bin/create-post.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.1.3",
