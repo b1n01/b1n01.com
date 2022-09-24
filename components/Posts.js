@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 export default function Posts({ posts }) {
-	const links = posts.map(({ slug, title, preview }) => {
+	const links = posts.map(({ slug, title, excerpt }) => {
 		return (
-			<p>
+			<div key={slug}>
 				<Link href={"blog/" + slug}>
 					<a>{title}</a>
 				</Link>
-				<p>{preview}</p>
-			</p>
+				<p>{excerpt}</p>
+			</div>
 		);
 	});
 

@@ -1,5 +1,5 @@
-import Posts from "../components/Posts.js";
 import Nav from "../components/Nav.js";
+import Posts from "../components/Posts.js";
 import { getPostsData } from "../lib/posts.js";
 
 export default function Blog({ posts }) {
