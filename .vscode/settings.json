@@ -12,4 +12,15 @@
 	"[javascript][typescript][css]": {
 	 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
+
+	// Tailwind config
+	"css.validate": false,
+	"editor.quickSuggestions": {
+  	   "strings": true
+	},
+	"tailwindCSS.includeLanguages": {
+   		"html": "html",
+    	"javascript": "javascript",
+    	"css": "css"
+	},
 }
