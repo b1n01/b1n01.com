@@ -25,10 +25,10 @@ npm run publish
 To try the static site locally, run:
 
 ```
-npx http-server out
+npx serve out
 ```
 
-and visit [http://localhost:8080](http://localhost:8080).
+and visit [http://localhost:3000](http://localhost:3000).
 
 ## Create a new post
 
@@ -43,5 +43,5 @@ npm run create-post "New Blog Post"
 You can use the utility `node.sh` to run command from a nodejs container:
 
 ```
-sh node.sh npm run dev
+sh bin/node npm run dev
 ```

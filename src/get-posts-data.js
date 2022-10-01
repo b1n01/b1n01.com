@@ -1,24 +1,28 @@
+import { serialize } from "next-mdx-remote/serialize";
 import { readdir, readFile } from "fs/promises";
-import path from "path";
 import matter from "gray-matter";
+import path from "path";
 
-export async function getPostsData(config) {
+export default async function getPostsData(config) {
 	const { limit } = config || {};
 
-	const postsPath = path.join(process.cwd(), "pages", "blog");
+	const postsPath = path.join(process.cwd(), "posts");
 	let files = await readdir(postsPath);
 	if (limit) files = files.slice(0, limit);
 
 	let posts = [];
 	for (const file of files) {
-		const filePath = path.join(process.cwd(), "pages", "blog", file);
+		const filePath = path.join(process.cwd(), "posts", file);
 		const fileContents = await readFile(filePath, "utf8");
-		const { data } = matter(fileContents);
+
+		const { content, data } = matter(fileContents);
+		const source = await serialize(content);
 
 		posts.push({
 			slug: path.parse(file).name,
 			title: data.title,
 			excerpt: data.excerpt,
+			source,
 		});
 	}
 

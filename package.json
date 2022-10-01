@@ -2,21 +2,19 @@
   "name": "b1n01.com",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "publish": "next build && next export",
-	"create-post": "node ./bin/create-post.mjs"
+    "create-post": "node ./bin/create-post.js"
   },
   "dependencies": {
-    "@mdx-js/loader": "^2.1.3",
-    "@mdx-js/react": "^2.1.3",
-    "@next/mdx": "^12.3.0",
     "gray-matter": "^4.0.3",
     "next": "12.3.0",
+    "next-mdx-remote": "^4.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "remark-frontmatter": "^4.0.1",
     "swr": "^1.3.0"
   }
 }

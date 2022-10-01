@@ -1,7 +1,7 @@
-import Nav from "../components/Nav.js";
-import Repos from "../components/Repos.js";
-import Posts from "../components/Posts.js";
-import { getPostsData } from "../lib/posts.js";
+import Nav from "../src/components/Nav.js";
+import Repos from "../src/components/Repos.js";
+import Posts from "../src/components/Posts.js";
+import getPostsData from "../src/get-posts-data.js";
 
 export default function Home({ posts }) {
 	return (

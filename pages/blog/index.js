@@ -1,6 +1,6 @@
-import Nav from "../components/Nav.js";
-import Posts from "../components/Posts.js";
-import { getPostsData } from "../lib/posts.js";
+import Nav from "../../src/components/Nav.js";
+import Posts from "../../src/components/Posts.js";
+import getPostsData from "../../src/get-posts-data.js";
 
 export default function Blog({ posts }) {
 	return (
