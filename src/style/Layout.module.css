@@ -1,0 +1,13 @@
+.wrapper {
+	max-width: 56rem;
+	margin: auto;
+	min-width: 600px;
+}
+
+.nav {
+	background-color: chocolate;
+}
+
+.content {
+	background-color: forestgreen;
+}

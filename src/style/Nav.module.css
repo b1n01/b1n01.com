@@ -1,0 +1,7 @@
+.item {
+	padding: 0 8px;
+}
+
+.active {
+	background-color: var(--accent-color);
+}

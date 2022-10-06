@@ -1,6 +1,6 @@
 import Repos from "../components/Repos.js";
 import Posts from "../components/Posts.js";
-import getPostsData from "../get-posts-data.js";
+import getPostsData from "../postData.js";
 
 export default function Home({ posts }) {
 	return (
