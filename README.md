@@ -25,7 +25,7 @@ npm run publish
 To try the static site locally, run:
 
 ```
-npx serve out
+npx -y serve out
 ```
 
 and visit [http://localhost:3000](http://localhost:3000).
