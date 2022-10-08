@@ -13,6 +13,9 @@
 	 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
 
+	"html.autoClosingTags": false,
+	"javascript.autoClosingTags": false, 
+
 	// Tailwind config
 	"css.validate": false,
 	"editor.quickSuggestions": {

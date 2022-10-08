@@ -1,0 +1,18 @@
+.wrapper {
+	margin: 128px 0;
+	text-align: center;
+}
+.title {
+	font-size: 48px;
+	font-weight: bold;
+	color: var(--white-color);
+	margin-bottom: 32px;
+}
+.subtitle {
+	font-size: 18px;
+	margin-bottom: 8px;
+	color: var(--gray-color);
+}
+.accent {
+	color: var(--blue-color);
+}

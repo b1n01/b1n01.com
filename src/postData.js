@@ -3,6 +3,8 @@ import { readdir, readFile } from "fs/promises";
 import matter from "gray-matter";
 import path from "path";
 
+// TODO sort posts by creation date (front matter attribute)
+
 export default async function getPostsData(config) {
 	const { limit } = config || {};
 

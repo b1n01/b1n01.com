@@ -1,20 +1,36 @@
+import Link from "next/link";
 import Repos from "../components/Repos.js";
 import Posts from "../components/Posts.js";
-import getPostsData from "../get-posts-data.js";
+import Hero from "../components/Hero.js";
+import getPostsData from "../postData.js";
+import style from "../style/Home.module.css";
+
+const Subtitle = ({ children }) => {
+	return <div className={style.subtitle}>{children}</div>;
+};
 
 export default function Home({ posts }) {
 	return (
 		<>
-			<h2>Latest posts</h2>
+			<Hero />
+
+			<Subtitle>Recent posts</Subtitle>
 			<Posts posts={posts} />
-			<h2>Latest commits</h2>
+			<Link href={"/blog"}>
+				<a className={style.readMore}>More posts</a>
+			</Link>
+
+			<Subtitle>Recent commits</Subtitle>
 			<Repos />
+			<a href="https://github.com/b1n01" className={style.readMore}>
+				More commits
+			</a>
 		</>
 	);
 }
 
 export async function getStaticProps() {
-	const posts = await getPostsData({ limit: 2 });
+	const posts = await getPostsData({ limit: 3 });
 	return {
 		props: { posts: posts },
 	};

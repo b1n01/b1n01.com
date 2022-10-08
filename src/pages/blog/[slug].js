@@ -1,6 +1,6 @@
-import getPostsData from "../../get-posts-data.js";
+import getPostsData from "../../postData.js";
 import { MDXRemote } from "next-mdx-remote";
-import components from "../../mdx-componensts";
+import components from "../../mdxComponensts";
 
 export default function Post({ post }) {
 	return <MDXRemote {...post.source} components={components} />;
