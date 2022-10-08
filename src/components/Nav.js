@@ -5,8 +5,8 @@ import style from "../style/Nav.module.css";
 const items = [
 	{ href: "/", label: "Home" },
 	{ href: "/blog", label: "Blog" },
-	{ href: "https://github.com/b1n01", label: "Github" },
-	{ href: "https://mirra.b1n01.com/", label: "Music" },
+	{ href: "https://github.com/b1n01", label: "Github ➚" },
+	{ href: "https://mirra.b1n01.com/", label: "Music ➚" },
 ];
 
 export default function Posts() {
@@ -24,5 +24,5 @@ export default function Posts() {
 		);
 	});
 
-	return <div className="flex gap-4">{links}</div>;
+	return <div className={style.wrapper}>{links}</div>;
 }

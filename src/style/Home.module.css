@@ -1,0 +1,18 @@
+.subtitle {
+	font-size: 16px;
+	color: var(--blue-color);
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 64px;
+}
+
+.readMore {
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: var(--shadow-color);
+	padding: 8px;
+	border-radius: 4px;
+	text-align: center;
+	display: block;
+	color: var(--white-color);
+}

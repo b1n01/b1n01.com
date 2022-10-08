@@ -1,0 +1,19 @@
+.post {
+	margin: 48px 0;
+}
+.link:hover .readMore {
+	color: var(--blue-color);
+}
+.title {
+	font-size: 21px;
+	color: var(--white-color);
+	font-weight: bold;
+}
+.excerpt {
+	color: var(--gray-color);
+	margin: 12px 0 0 0;
+}
+.readMore {
+	color: var(--purple-color);
+	margin: 8px 0;
+}

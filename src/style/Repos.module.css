@@ -1,0 +1,36 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+	margin: 48px 0 16px 0;
+}
+.repo {
+	background-color: var(--shadow-color);
+	padding: 32px;
+	border-radius: 4px;
+	color: var(--white-color);
+}
+.title {
+	font-weight: bold;
+}
+.description {
+	color: var(--gray-color);
+	margin-top: 8px;
+}
+.languages {
+	margin-top: 12px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: var(--gray-color);
+	font-size: 12px;
+	flex-wrap: wrap;
+}
+.dot {
+	display: inline-block;
+	height: 8px;
+	width: 8px;
+	background-color: var(--gray-color);
+	border-radius: 100%;
+	margin-right: 8px;
+}

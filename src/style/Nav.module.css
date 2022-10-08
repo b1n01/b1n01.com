@@ -1,7 +1,15 @@
-.item {
-	padding: 0 8px;
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 32px 0;
 }
-
+.item {
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0 32px 0 0;
+	color: var(--purple-color);
+}
 .active {
-	background-color: var(--accent-color);
+	color: var(--blue-color);
 }
