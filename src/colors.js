@@ -1,3 +1,5 @@
+// Original list from https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+// https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 const languages = {
 	"1C Enterprise": "#814CCC",
 	"2-Dimensional Array": "#38761D",
@@ -530,5 +532,5 @@ const languages = {
 };
 
 export default function getLanguageColor(language) {
-	return languages[language] || "black";
+	return languages[language] || "#79879c";
 }
