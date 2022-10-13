@@ -6,4 +6,75 @@ timestamp: 1665066656
 
 # Struggle with touch typing
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+Sed ut perspiciatis **bold bold bold** natus error sit voluptatem _italic italic_ laudan tium, [tooam Go](https://duckduckgo.com) rem aperiam. How i manage to not learn touch tipybng in 5 years of tring. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring
+
+Sed ut perspiciatis **bold bold bold** natus error sit voluptatem _italic italic_ laudan tium, [tooam Go](https://duckduckgo.com) rem aperiam. How i manage to not learn touch tipybng in 5 years of tring. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring
+
+## Code exaple here
+
+`Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring`
+
+## Other hore
+
+1. Third item
+2. First item
+    1. Indented item
+
+## Soeting here
+
+-   First item
+-   Second item
+    -   Indented item
+
+![header](https://images.unsplash.com/photo-1664997430789-b32d7653ff12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80)
+
+Sed `ut perspiciatis unde omnis iste natus` error sit voluptatem _accusantium doloremque_ laudan tium
+
+`Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring`
+
+> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring
+
+---
+
+## Other example here
+
+```
+import { serialize } from "next-mdx-remote/serialize";
+import { readdir, readFile } from "fs/promises";
+import matter from "gray-matter";
+import path from "path";
+
+export default async function getPostsData(config) {
+	const { limit } = config || {};
+
+    const postsPath = path.join(process.cwd(), "posts");
+    let files = await readdir(postsPath);
+
+    let posts = [];
+    for (const file of files) {
+    	const filePath = path.join(process.cwd(), "posts", file);
+    	const fileContent = await readFile(filePath, "utf8");
+
+    	const { content, data } = matter(fileContent);
+    	const source = await serialize(content);
+
+    	posts.push({
+    		slug: path.parse(file).name,
+    		title: data.title,
+    		excerpt: data.excerpt,
+    		timestamp: data.timestamp,
+    		source,
+    	});
+    }
+
+    posts.sort((a, b) => b.timestamp - a.timestamp);
+    if (limit) posts = posts.slice(0, limit);
+
+    return posts;
+
+}
+```
+
+Totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam. How i manage to not learn touch tipybng in 5 years of tring
+
+See my [Duck Duck Go](https://duckduckgo.com)
