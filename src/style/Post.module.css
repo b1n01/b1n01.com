@@ -1,0 +1,17 @@
+.post {
+	max-width: 600px;
+	margin: 0 auto;
+	line-height: 1.6;
+	color: var(--white-color);
+}
+.post h1 {
+	font-size: 32px;
+}
+.post h2 {
+	font-size: 24px;
+}
+.post pre {
+	background-color: var(--shadow-color);
+	border-radius: 4px;
+	padding: 16px;
+}

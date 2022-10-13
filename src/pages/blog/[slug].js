@@ -1,9 +1,14 @@
 import getPostsData from "../../postData.js";
 import { MDXRemote } from "next-mdx-remote";
 import components from "../../mdxComponensts";
+import style from "../../style/Post.module.css";
 
 export default function Post({ post }) {
-	return <MDXRemote {...post.source} components={components} />;
+	return (
+		<section className={style.post}>
+			<MDXRemote {...post.source} components={components} />
+		</section>
+	);
 }
 
 export async function getStaticPaths() {
