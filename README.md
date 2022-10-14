@@ -14,8 +14,6 @@ Start the dev server:
 npm run dev
 ```
 
-and visit [http://localhost:3000](http://localhost:3000).
-
 Build the static site:
 
 ```
@@ -28,8 +26,6 @@ To try the static site locally, run:
 npx -y serve out
 ```
 
-and visit [http://localhost:3000](http://localhost:3000).
-
 ## Create a new post
 
 Use the create-post utility to generate a file for a new post:
@@ -40,8 +36,8 @@ npm run create-post "New Blog Post"
 
 ## Using docker
 
-You can use the utility `node.sh` to run command from a nodejs container:
+You can use the `node` utility to run command from a nodejs container:
 
 ```
-sh bin/node npm run dev
+sh bin/node [command]
 ```
