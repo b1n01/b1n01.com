@@ -2,6 +2,7 @@ import Link from "next/link";
 import Repos from "../components/Repos.js";
 import Posts from "../components/Posts.js";
 import Hero from "../components/Hero.js";
+import Layout from "../components/Layout.js";
 import getPostsData from "../postData.js";
 import style from "../style/Home.module.css";
 
@@ -11,7 +12,7 @@ const Subtitle = ({ children }) => {
 
 export default function Home({ posts }) {
 	return (
-		<>
+		<Layout>
 			<Hero />
 
 			<Subtitle>Recent posts</Subtitle>
@@ -25,7 +26,7 @@ export default function Home({ posts }) {
 			<a href="https://github.com/b1n01" className={style.readMore}>
 				More commits
 			</a>
-		</>
+		</Layout>
 	);
 }
 
