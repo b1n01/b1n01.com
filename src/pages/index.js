@@ -14,12 +14,8 @@ export default function Home({ posts }) {
 	return (
 		<Layout>
 			<Hero />
-
 			<Subtitle>Recent posts</Subtitle>
 			<Posts posts={posts} />
-			<Link href={"/blog"}>
-				<a className={style.readMore}>More posts</a>
-			</Link>
 
 			<Subtitle>Recent commits</Subtitle>
 			<Repos />

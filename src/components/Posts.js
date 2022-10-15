@@ -1,15 +1,21 @@
 import Link from "next/link";
+import { formatDate } from "../utils.js";
+import { RightArrow } from "../icons.js";
 import style from "../style/Posts.module.css";
 
 export default function Posts({ posts }) {
-	const links = posts.map(({ slug, title, excerpt }) => {
+	const links = posts.map(({ slug, title, excerpt, timestamp: time }) => {
 		return (
 			<article key={slug} className={style.post}>
 				<Link href={"blog/" + slug}>
-					<a className={style.link}>
+					<a>
+						<div className={style.date}>{formatDate(time)}</div>
 						<header className={style.title}>{title}</header>
-						<p className={style.excerpt}>{excerpt}</p>
-						<p className={style.readMore}>Read more</p>
+						<div className={style.excerpt}>{excerpt}</div>
+						<div className={style.readMore}>
+							Read more
+							<RightArrow />
+						</div>
 					</a>
 				</Link>
 			</article>

@@ -4,6 +4,7 @@ import getPostsData from "../../postData.js";
 import { formatDate } from "../../utils.js";
 import { MDXRemote } from "next-mdx-remote";
 import components from "../../mdxComponensts";
+import Footer from "../../components/Footer.js";
 import style from "../../style/Post.module.css";
 
 export default function Post({ post }) {
@@ -19,6 +20,7 @@ export default function Post({ post }) {
 				Luca Lorenzini, {formatDate(post.timestamp)}
 			</p>
 			<MDXRemote {...post.source} components={components} />
+			<Footer />
 		</article>
 	);
 }

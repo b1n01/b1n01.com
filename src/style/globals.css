@@ -7,16 +7,20 @@
 	--blue-color: #3a8ad4;
 	--purple-color: #b67dff;
 }
-html {
+html,
+body {
 	font-family: "Open Sans", sans-serif;
 	color: var(--white-color);
 	background-color: var(--bg-color);
 	height: 100%;
 	min-height: 100vh;
+	margin: 0;
+	padding: 0;
 }
 a {
 	color: var(--purple-color);
 	text-decoration: none;
+	transition: 0.2s;
 }
 a:hover {
 	color: var(--blue-color);

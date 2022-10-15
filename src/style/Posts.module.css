@@ -1,19 +1,38 @@
 .post {
 	margin: 48px 0;
 }
-.link:hover .readMore {
-	color: var(--blue-color);
-}
 .title {
 	font-size: 21px;
 	color: var(--white-color);
 	font-weight: bold;
+	margin: 8px 0 0 0;
+}
+.date {
+	color: var(--gray-color);
+	margin: 12px 0 0 0;
 }
 .excerpt {
-	color: var(--gray-color);
+	color: var(--white-color);
 	margin: 12px 0 0 0;
 }
 .readMore {
 	color: var(--purple-color);
-	margin: 8px 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin: 8px 0 0 0;
+	transition: 0.2s;
+}
+.post:hover .readMore {
+	color: var(--blue-color);
+	margin-left: 4px;
+}
+.readMore svg {
+	transition: 0.2s;
+	opacity: 0;
+	color: var(--purple-color);
+}
+.post:hover .readMore svg {
+	opacity: 1;
+	color: var(--blue-color);
 }

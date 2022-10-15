@@ -3,9 +3,11 @@ import { useRouter } from "next/router";
 import { Link as LinkIcon } from "../icons.js";
 import style from "../style/Nav.module.css";
 
-const items = [
+const navItems = [
 	{ href: "/", label: "Home" },
 	{ href: "/blog", label: "Blog" },
+];
+const navLinks = [
 	{ href: "https://github.com/b1n01", label: "Github" },
 	{ href: "https://mirra.b1n01.com/", label: "Music" },
 ];
@@ -13,21 +15,27 @@ const items = [
 export default function Posts() {
 	const path = useRouter().pathname;
 
-	const links = items.map(({ href, label }) => {
-		const isIndex = href === "/";
-		const isActive = isIndex ? path === "/" : path.startsWith(href);
-		const activeClass = isActive ? style.active : "";
-		const icon = href.includes("http") ? <LinkIcon /> : "";
+	const items = navItems.map(({ href, label }) => (
+		<Link key={label} href={href}>
+			<a className={`${path === href ? style.active : ""} ${style.item}`}>
+				{label}
+			</a>
+		</Link>
+	));
 
-		return (
-			<Link key={href} href={href}>
-				<a className={`${activeClass} ${style.item}`}>
-					{label}
-					{icon}
-				</a>
-			</Link>
-		);
-	});
+	const links = navLinks.map(({ href, label }) => (
+		<Link key={label} href={href}>
+			<a className={style.item}>
+				{label}
+				{<LinkIcon />}
+			</a>
+		</Link>
+	));
 
-	return <div className={style.wrapper}>{links}</div>;
+	return (
+		<div className={style.wrapper}>
+			<div className={style.menu}>{items}</div>
+			<div className={style.menu}>{links}</div>
+		</div>
+	);
 }
