@@ -9,7 +9,7 @@ const navItems = [
 ];
 const navLinks = [
 	{ href: "https://github.com/b1n01", label: "Github" },
-	{ href: "https://mirra.b1n01.com/", label: "Music" },
+	{ href: "https://undiscover.it", label: "Music" },
 ];
 
 export default function Posts() {
