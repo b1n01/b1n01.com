@@ -20,7 +20,6 @@ body {
 a {
 	color: var(--purple-color);
 	text-decoration: none;
-	transition: 0.2s;
 }
 a:hover {
 	color: var(--blue-color);

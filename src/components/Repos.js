@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import style from "../style/Repos.module.css";
+import { Repo } from "../icons.js";
 import getLanguageColor from "../colors.js";
 
 const repoURL =
@@ -50,7 +51,10 @@ export default function App() {
 		<div className={style.wrapper}>
 			{repos.map(({ name, desc, url, langs }) => (
 				<a href={url} key={name} className={style.repo}>
-					<div className={style.title}>{name}</div>
+					<div className={style.title}>
+						<Repo />
+						{name}
+					</div>
 					<div className={style.description}>{desc}</div>
 					<div className={style.languages}>
 						{langs.map(({ lang, color }) => (

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { formatDate } from "../utils.js";
-import { RightArrow } from "../icons.js";
 import style from "../style/Posts.module.css";
 
 export default function Posts({ posts }) {
@@ -12,10 +11,7 @@ export default function Posts({ posts }) {
 						<div className={style.date}>{formatDate(time)}</div>
 						<header className={style.title}>{title}</header>
 						<div className={style.excerpt}>{excerpt}</div>
-						<div className={style.readMore}>
-							Read more
-							<RightArrow />
-						</div>
+						<div className={style.readMore}>Read more</div>
 					</a>
 				</Link>
 			</article>
